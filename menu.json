@@ -1,0 +1,28 @@
+{
+  "menuItems": [
+    {
+      "name": "Home",
+      "link": "index.html"
+    },
+    {
+      "name": "Chess",
+      "link": "chess.html"
+    },
+    {
+      "name": "Abacus",
+      "link": "abacus.html"
+    },
+    {
+      "name": "Archery",
+      "link": "archery.html"
+    },
+    {
+      "name": "About Us",
+      "link": "contactus.html"
+    },
+    {
+      "name": "Contact Us",
+      "link": "contactus.html"
+    }
+  ]
+}

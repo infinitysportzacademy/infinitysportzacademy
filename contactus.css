@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #8b0000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navbar {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-menu {
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffd700;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8b0000;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-item h3 {
+    color: #8b0000;
+    margin-bottom: 10px;
+}
+
+/* About Us, Vision, Mission, Testimonials, Contact Us Sections */
+.about-us,
+.contact-us {
+        padding: 40px 20px;
+        background-color: transparent;
+        max-width: 1000px;
+        margin: 0 auto; /* This centers the section horizontally */
+        text-align: center;
+        align-items: center;
+        justify-content: center; /* Ensures the content inside is centered */
+    }
+    .about-us{
+        padding: 20px 20px;
+        background-color: #ffffff ;
+        max-width: 1000px;
+        margin: 0 auto; /* This centers the section horizontally */
+        text-align: center;
+        /* color: #333; */
+        align-items: center;
+        justify-content: center; /* Ensures the content inside is centered */
+    }
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8b0000;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.section-content {
+    line-height: 1.8;
+    color: #333;
+}
+
+.register-button {
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #ffa500;
+}
+
+.contact-description {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-details {
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-details h3 {
+    color: #8b0000;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-us,
+    .vision,
+    .mission,
+    .testimonials,
+    .contact-us {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
