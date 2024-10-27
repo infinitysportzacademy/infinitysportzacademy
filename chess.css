@@ -183,6 +183,39 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        background-color: #8b0000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .navbar {
+        flex: 1;
+        text-align:unset;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        display: inline-flex;
+    }
+    
+    .nav-item {
+        margin: 0 1px;
+    }
+    
+    .nav-item a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    
+    .nav-item a:hover {
+        color: #ffd700;
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -196,4 +229,5 @@ body {
         width: 100%;
         max-width: 300px;
     }
+
 }
