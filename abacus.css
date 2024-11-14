@@ -20,6 +20,9 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -34,10 +37,7 @@ body {
 .nav-menu {
     list-style: none;
     display: inline-flex;
-}
-
-.nav-item {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 .nav-item a {
@@ -50,8 +50,8 @@ body {
 .nav-item a:hover {
     color: #ffd700;
 }
-/* Add these styles to your existing abacus.css file */
 
+/* Benefits Section */
 .benefits-section {
     padding: 40px 20px;
     background-color: #ffffff;
@@ -100,26 +100,8 @@ body {
 #abacus-syllabus {
     padding: 40px 20px;
     background-color: #fff;
-    position: relative; /* Ensures that the button can be positioned relative to this container */
+    position: relative;
 }
-
-.register-button {
-    position: absolute;
-    top: 10;
-    right: 250px;
-    background-color: #8b0000;
-    color: #ffffff;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.register-button:hover {
-    background-color: #ffa500;
-}
-
 
 .section-title {
     text-align: center;
@@ -128,25 +110,50 @@ body {
     font-size: 2em;
 }
 
+.register-button {
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    right: 250px;
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #ffa500;
+    transform: translateY(-2px);
+}
+
 .levels {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1000px;
+    gap: 25px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .level {
     background-color: #f8f8f8;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.level:hover {
+    transform: translateY(-5px);
 }
 
 .level h3 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    color: #8b0000;
+    margin-bottom: 15px;
+    font-size: 1.3em;
 }
 
 .level ul {
@@ -155,8 +162,8 @@ body {
 }
 
 .level ul li {
-    margin-bottom: 5px;
-    font-size: 1em;
+    margin-bottom: 8px;
+    color: #444;
 }
 
 /* Footer */
@@ -175,15 +182,36 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .levels {
-        grid-template-columns: 1fr;
-        padding: 0 10px;
+    /* Header Mobile Styles */
+    .header {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 60px;
     }
 
     .nav-menu {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #8b0000;
+        padding: 10px 0;
     }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Benefits Section Mobile Styles */
     .benefits-section {
         padding: 30px 15px;
     }
@@ -204,4 +232,58 @@ body {
     .benefit-item p {
         font-size: 0.95em;
     }
+
+    /* Syllabus Section Mobile Styles */
+    .levels {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .register-button {
+        position: static;
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        padding: 0 15px;
+    }
+
+    .level {
+        padding: 20px;
+    }
+
+    .level h3 {
+        font-size: 1.2em;
+    }
+
+    /* Add mobile menu toggle button */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/* Animation for hover effects */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.register-button:hover {
+    animation: buttonPulse 1s infinite;
 }
