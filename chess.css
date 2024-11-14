@@ -102,7 +102,24 @@ body {
 .cta-button:hover {
     background-color: #ffa500;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+/* Header styles (keeping your existing header styles) */
+.header {
+    background-color: #8b0000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 /* Benefits Overview Section */
 .benefits-overview {
     background-color: #fff;
